@@ -22,7 +22,7 @@ Welcome to the ITI CPP Course repository! This repository contains the labs and 
 ## Assignments
 
 - [Assignment 1: System for Statistical Information of Cities](./Assignments/Cities_Stats.cpp/)
-- [Assignment 2: Hospitals Management System](./Assignments/Hospitals_Management_System/)
+- [Assignment 2: Hospitals Management System](./Assignments/Hospitals.cpp/)
 
 Feel free to explore the labs and assignments in the corresponding directories.
 

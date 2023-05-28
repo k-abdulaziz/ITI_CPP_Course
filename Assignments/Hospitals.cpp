@@ -31,6 +31,7 @@ public:
 class Hospital
 {
 private:
+    string hospital_index;
     string hospital_name;
     string hospital_address;
     string hospital_phone_number;
@@ -41,10 +42,10 @@ private:
     Patient patients[MAX_PATIENTS];
 
 public:
-    Hospital() : hospital_name(""), hospital_address(""), hospital_phone_number(""), hospital_capacity(0), hospital_patients_count(0), hospital_doctors_count(0), hospital_nurses_count(0) {}
+    Hospital() : hospital_index(""), hospital_name(""), hospital_address(""), hospital_phone_number(""), hospital_capacity(0), hospital_patients_count(0), hospital_doctors_count(0), hospital_nurses_count(0) {}
 
-    Hospital(string name, string address, string phone_number, int capacity, int patients_count, int doctors_count, int nurses_count)
-        : hospital_name(name), hospital_address(address), hospital_phone_number(phone_number), hospital_capacity(capacity), hospital_patients_count(patients_count), hospital_doctors_count(doctors_count), hospital_nurses_count(nurses_count) {}
+    Hospital(string index, string name, string address, string phone_number, int capacity, int patients_count, int doctors_count, int nurses_count)
+        : hospital_index(index), hospital_name(name), hospital_address(address), hospital_phone_number(phone_number), hospital_capacity(capacity), hospital_patients_count(patients_count), hospital_doctors_count(doctors_count), hospital_nurses_count(nurses_count) {}
 
     void addPatient(const Patient& p);
     void removePatient(int id);
@@ -55,8 +56,8 @@ public:
 int main()
 {
     // Create hospitals
-    Hospital DarAlFouad("Dar Al Fouad", "Cairo", "+02 2145 1548", 350, 0, 35, 30);
-    Hospital AlKasrAlAiny("Al Kasr Al Ainy", "Giza", "+02 1545 2415", 500, 0, 50, 60);
+    Hospital DarAlFouad("35156", "Dar Al Fouad", "Cairo", "+02 2145 1548", 350, 0, 35, 30);
+    Hospital AlKasrAlAiny("34245", "Al Kasr Al Ainy", "Giza", "+02 1545 2415", 500, 0, 50, 60);
 
     // Create patients
     Patient patient1(125, "Ali Sayed", "male", 29, "O-");
@@ -160,6 +161,7 @@ void Hospital::displayHospitalInfo()
     cout << "------------------------------" << endl;
     cout << "         HOSPITAL_INFO        " << endl;
     cout << "------------------------------" << endl;
+    cout << "Index: " << hospital_index << endl;
     cout << "Name: " << hospital_name << endl;
     cout << "Address: " << hospital_address << endl;
     cout << "Phone Number: " << hospital_phone_number << endl;
